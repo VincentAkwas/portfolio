@@ -221,6 +221,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--borderf);max-width
 <nav>
   <a href="#" class="nav-logo">Manu <em>Vincent</em></a>
   <ul class="nav-links">
+    <li><a href="#kairos">Kairos</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#blog">Blog</a></li>
@@ -404,9 +405,70 @@ footer{position:relative;z-index:1;border-top:1px solid var(--borderf);max-width
 </section>
 
 <div class="divider"></div>
+<div class="divider"></div>
+
+<!-- ════ KAIROS COMPASS SECTION — PASTE STARTS HERE ════ -->
+<section class="section" id="kairos">
+  <div class="sh rv">
+    <span class="sn">06 /</span>
+    <h2 class="stitle">Kairos Compass</h2>
+    <div class="sl"></div>
+  </div>
+
+  <!-- Kairos intro card -->
+  <div class="rv" style="background:var(--ink2);border:1px solid var(--borderf);padding:2.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
+    <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;">
+      <div>
+        <div style="font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;">Interactive Assessment</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:.8rem;line-height:1.2;">Kairos Compass <em style="font-style:italic;color:var(--gold);font-size:.85em;">καιρός</em></div>
+        <p style="font-size:.9rem;line-height:1.85;color:var(--muted);max-width:520px;">Discover your relationship with timing through this 10-question assessment inspired by ancient Greek wisdom. Find out if you are <strong style="color:var(--text);">The Seer, The Weaver, The Seeker,</strong> or <strong style="color:var(--text);">The Awakener</strong> — and receive a personalised timing profile.</p>
+        <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <button onclick="document.getElementById('kairosApp').scrollIntoView({behavior:'smooth'})" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:none;padding:1rem 2rem;cursor:pointer;transition:all .25s;">Take the Assessment ↓</button>
+        </div>
+      </div>
+      <div style="text-align:right;font-family:'Playfair Display',serif;">
+        <div style="font-size:5rem;opacity:.08;color:var(--gold);line-height:1;pointer-events:none;">καιρός</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded Kairos App -->
+  <div id="kairosApp" class="rv" style="background:var(--ink2);border:1px solid var(--borderf);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
+    <div id="kairosInner" style="padding:2.5rem;">
+
+      <!-- Progress -->
+      <div style="margin-bottom:2rem;">
+        <div style="display:flex;justify-content:space-between;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">
+          <span id="kStepLabel">Question 1 of 10</span><span id="kPct">10%</span>
+        </div>
+        <div style="height:2px;background:var(--borderf);border-radius:2px;overflow:hidden;">
+          <div id="kProgressFill" style="height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;transition:width .5s ease;width:10%;"></div>
+        </div>
+      </div>
+
+      <!-- Question container -->
+      <div id="kQuestionArea"></div>
+
+      <!-- Buttons -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2rem;">
+        <button id="kPrevBtn" onclick="kPrev()" style="visibility:hidden;font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--borderf);padding:.85rem 1.8rem;cursor:pointer;transition:all .25s;">← Back</button>
+        <button id="kNextBtn" onclick="kNext()" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:none;padding:.85rem 2rem;cursor:pointer;transition:all .25s;">Continue →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results container -->
+  <div id="kResults" style="display:none;margin-top:1.5rem;"></div>
+</section>
+<!-- ════ KAIROS COMPASS SECTION — PASTE ENDS HERE ════ -->
+
+<div class="divider"></div>
 
 <section class="section" id="connect">
-  <div class="sh rv"><span class="sn">06 /</span><h2 class="stitle">Connect</h2><div class="sl"></div></div>
+<section class="section" id="connect">
+  <div class="sh rv"><span class="sn">07 /</span><h2 class="stitle">Connect</h2><div class="sl"></div></div>
   <div class="cg">
     <a href="https://www.linkedin.com/in/vincent-manu-b66174263" target="_blank" rel="noopener" class="cc rv">
       <div class="cc-icon">&#128188;</div><div class="cc-plat">Professional Network</div><div class="cc-name">LinkedIn</div><div class="cc-handle">Vincent Manu</div>
@@ -430,7 +492,205 @@ footer{position:relative;z-index:1;border-top:1px solid var(--borderf);max-width
   <div class="f-brand">Manu <em>Vincent</em></div>
   <div class="f-copy">MLS Scientist &amp; Developer &bull; Ghana &bull; 2026 &bull; All tools free &amp; open</div>
 </footer>
+<script>
+/* ════ KAIROS COMPASS LOGIC ════ */
+var kQ=[
+  {text:"I often sense when a significant opportunity is about to emerge — even before others notice it.",domain:"Awareness",icon:"👁"},
+  {text:"When a critical moment arrives, I trust my intuition and act without overthinking.",domain:"Decisiveness",icon:"⚡"},
+  {text:"I have regretted missed opportunities because I waited too long to act.",domain:"Regret",icon:"⌛"},
+  {text:"I actively prepare myself so that when the right moment comes, I am ready.",domain:"Preparation",icon:"🛡"},
+  {text:"Looking back, most of my major life achievements came at moments I recognised and seized.",domain:"Mastery",icon:"✦"},
+  {text:"I sometimes force action when the timing isn't right — and later wish I had waited.",domain:"Patience",icon:"🌿"},
+  {text:"I can distinguish between a fleeting impulse and a genuine kairos moment.",domain:"Discernment",icon:"⚖"},
+  {text:"When under pressure, I make better decisions than when I have unlimited time.",domain:"Pressure",icon:"🔥"},
+  {text:"I have a strong sense of seasonality — knowing when to push forward and when to pause.",domain:"Rhythm",icon:"☽"},
+  {text:"People come to me for advice on when to make important decisions.",domain:"Wisdom",icon:"📜"}
+];
+var kA=new Array(10).fill(null);
+var kCur=0;
+var kAT={
+  seer:{glyph:"🔮",name:"The Seer",title:"One Who Recognises Destiny",
+    desc:"You possess an extraordinary ability to sense opportune moments before they fully arrive. People with your gift often find themselves at the right place at the right time — not by luck, but by deep intuition and cultivated awareness.",
+    quote:"You do not wait for the tide. You become the tide.",
+    strengths:"Exceptional timing intuition · Natural leadership in crises · Others seek your counsel in pivotal moments",
+    challenge:"You may grow impatient with slower minds. Your gift risks becoming arrogance if untempered by humility.",
+    practice:"Keep a Kairos Journal — document moments you sensed opportunity before it arrived and track the outcomes. This ritual deepens your already formidable gift."
+  },
+  weaver:{glyph:"🕸",name:"The Weaver",title:"One Who Prepares the Thread",
+    desc:"You understand that kairos is not only about recognition — it is about preparation. You weave the conditions that make moments opportune through steady, intentional work.",
+    quote:"You do not stumble upon the moment. You build it.",
+    strengths:"Excellent preparation discipline · Creates opportunities for self and others · Calm and reliable under pressure",
+    challenge:"Beware the trap of endless preparation. There comes a moment when the loom must stop — and the cloth must be cut.",
+    practice:"Practice disciplined spontaneity — prepare thoroughly, then schedule one unplanned decision each week. Let go of the map and trust the territory."
+  },
+  seeker:{glyph:"🧭",name:"The Seeker",title:"One Who Learns Through Reflection",
+    desc:"You are deepening your relationship with timing. You have experienced both missed opportunities and premature actions — and you are wiser for each. Your path is one of growing self-awareness.",
+    quote:"Every wrong moment teaches you the shape of the right one.",
+    strengths:"Highly reflective and honest · Learns from mistakes with grace · Humility is the beginning of mastery",
+    challenge:"Hesitation is your companion — not always your enemy, but often your captor. Learn to move before certainty arrives.",
+    practice:"The 3-Second Rule: when your gut says act, count to three and move. Begin with small decisions to build trust in your own timing."
+  },
+  awakener:{glyph:"🌅",name:"The Awakener",title:"One Who Stands at the Threshold",
+    desc:"You are at the beginning of your kairos journey — and this is not a small thing. Awareness of timing can be cultivated. Every master once stood where you stand: uncertain, but curious.",
+    quote:"The threshold is not failure. It is the most honest beginning.",
+    strengths:"Open and teachable · Authentic self-awareness · The willingness to begin is itself a form of kairos",
+    challenge:"The danger is not ignorance — it is inaction born of self-doubt. You know more than you trust.",
+    practice:"Each morning, identify one opportune moment you will watch for that day. Celebrate when you notice it — even if you do not act yet."
+  }
+};
+var kTL={awareness:"Awareness",decisiveness:"Decisiveness",regret:"Regret (inv.)",preparation:"Preparation",success:"Mastery",impatience:"Patience (inv.)",discernment:"Discernment",pressure:"Pressure Clarity",rhythm:"Seasonal Rhythm",wisdom:"Wisdom"};
+var kTI={
+  awareness:"Your greatest gift is sensing opportunities before they manifest. This radar is more precise than you realise — trust it completely.",
+  decisiveness:"When you commit to action, you commit fully. Your challenge is knowing when stillness is also a form of power.",
+  regret:"Your awareness of lost moments sharpens your attention to coming ones. Let regret be teacher, not tormentor.",
+  preparation:"You build the conditions for kairos before it arrives. Most wait; you make ready.",
+  success:"Your track record of recognising pivotal moments is your most reliable asset. Study it — it reveals a pattern.",
+  impatience:"You have learned the hard lesson of premature action. That learning is now your compass.",
+  discernment:"You can distinguish impulse from intuition — a superpower that most never develop.",
+  pressure:"You sharpen under constraint. The moment of maximum pressure is your moment of maximum clarity.",
+  rhythm:"You understand seasons of life. This ancient wisdom is increasingly rare.",
+  wisdom:"Others feel your clarity about timing. Your counsel arrives precisely when those who seek it need it most."
+};
 
+function kRender(){
+  var q=kQ[kCur];
+  var pct=Math.round(((kCur+1)/10)*100);
+  document.getElementById('kProgressFill').style.width=pct+'%';
+  document.getElementById('kPct').textContent=pct+'%';
+  document.getElementById('kStepLabel').textContent='Question '+(kCur+1)+' of 10';
+  document.getElementById('kPrevBtn').style.visibility=kCur===0?'hidden':'visible';
+  document.getElementById('kNextBtn').textContent=kCur===9?'Reveal My Archetype →':'Continue →';
+  var html='<div style="background:var(--ink3);border:1px solid var(--borderf);padding:2rem;position:relative;">'
+    +'<div style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;">'+q.icon+' '+q.domain+'</div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-style:italic;line-height:1.7;color:var(--text);margin-bottom:1.5rem;max-width:90%;">'+q.text+'</div>'
+    +'<div style="display:flex;gap:.6rem;flex-wrap:wrap;">';
+  [1,2,3,4,5].forEach(function(v){
+    var sel=kA[kCur]===v;
+    html+='<button onclick="kPick('+v+')" style="flex:1;min-width:44px;max-width:72px;padding:.8rem .4rem;border:'+(sel?'1.5px solid var(--gold)':'1.5px solid var(--borderf)')+';background:'+(sel?'var(--gold)':'var(--ink2)')+';color:'+(sel?'var(--ink)':'var(--muted)')+';font-family:\'Plus Jakarta Sans\',sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .2s;border-radius:2px;">'+v+'</button>';
+  });
+  html+='</div><div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted2);margin-top:.6rem;font-style:italic;"><span>Strongly Disagree</span><span>Neutral</span><span>Strongly Agree</span></div></div>';
+  document.getElementById('kQuestionArea').innerHTML=html;
+}
+
+function kPick(v){kA[kCur]=v;kRender();}
+
+function kNext(){
+  if(kA[kCur]===null){
+    var el=document.querySelector('#kQuestionArea > div');
+    if(el){el.style.border='1px solid var(--rust,#7a3a1a)';setTimeout(function(){el.style.border='1px solid var(--borderf)';},700);}
+    return;
+  }
+  if(kCur<9){kCur++;kRender();}
+  else kShowResults();
+}
+
+function kPrev(){if(kCur>0){kCur--;kRender();}}
+
+function kShowResults(){
+  var raw={awareness:kA[0],decisiveness:kA[1],regret:6-kA[2],preparation:kA[3],success:kA[4],impatience:6-kA[5],discernment:kA[6],pressure:kA[7],rhythm:kA[8],wisdom:kA[9]};
+  var vals=Object.values(raw);
+  var total=vals.reduce(function(a,b){return a+b;},0)/10;
+  var pct=Math.round((total-1)/4*100);
+  var akey='awakener';
+  if(total>=4.2)akey='seer';
+  else if(total>=3.4)akey='weaver';
+  else if(total>=2.6)akey='seeker';
+  var AT=kAT[akey];
+  var topTrait=Object.entries(raw).sort(function(a,b){return b[1]-a[1];})[0][0];
+
+  document.getElementById('kairosApp').style.display='none';
+
+  var traitRows=Object.entries(raw).map(function(e){
+    var k=e[0],v=e[1];
+    return '<div style="margin-bottom:.9rem;">'
+      +'<div style="display:flex;justify-content:space-between;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;"><span>'+kTL[k]+'</span><span style="color:var(--gold);">'+v+'/5</span></div>'
+      +'<div style="height:3px;background:var(--borderf);border-radius:2px;overflow:hidden;">'
+      +'<div style="height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.34,1.56,.64,1);" data-w="'+((v/5)*100)+'%"></div>'
+      +'</div></div>';
+  }).join('');
+
+  var html=
+    '<div style="background:var(--ink2);border:1px solid var(--borderf);padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;margin-bottom:1.5rem;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>'
+    +'<div style="font-size:3rem;margin-bottom:1rem;animation:floatG 4s ease-in-out infinite;">'+AT.glyph+'</div>'
+    +'<div style="font-size:.62rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;">Your Kairos Archetype</div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:clamp(2rem,6vw,3.5rem);font-weight:900;color:#fff;margin-bottom:.4rem;">'+AT.name+'</div>'
+    +'<div style="font-size:.78rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;">'+AT.title+'</div>'
+    +'<div style="display:inline-flex;flex-direction:column;align-items:center;background:rgba(201,168,76,.07);border:1px solid var(--borderf);padding:.7rem 1.5rem;margin-bottom:1.2rem;">'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:2.2rem;font-weight:900;color:var(--gold2);">'+pct+'%</div>'
+    +'<div style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);">Kairos Alignment</div>'
+    +'</div>'
+    +'<p style="font-size:.95rem;line-height:1.85;color:var(--muted);max-width:580px;margin:0 auto 1.2rem;font-style:italic;">'+AT.desc+'</p>'
+    +'<div style="border-top:1px solid var(--borderf);padding-top:1rem;font-style:italic;color:var(--muted2);font-size:.9rem;">"'+AT.quote+'"</div>'
+    +'</div>'
+
+    +'<div style="background:var(--ink2);border:1px solid var(--borderf);padding:2rem;margin-bottom:1.5rem;position:relative;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:1.2rem;font-weight:700;color:#fff;text-align:center;margin-bottom:1.5rem;">⚖ Your Timing Profile</div>'
+    +traitRows
+    +'</div>'
+
+    +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.5rem;">'
+    +'<div style="background:var(--ink2);border:1px solid var(--borderf);padding:1.6rem;position:relative;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);opacity:.35;"></div>'
+    +'<div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">⚡ Core Strengths</div>'
+    +'<div style="font-size:.9rem;line-height:1.7;color:var(--muted);">'+AT.strengths+'</div></div>'
+    +'<div style="background:var(--ink2);border:1px solid var(--borderf);padding:1.6rem;position:relative;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);opacity:.35;"></div>'
+    +'<div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">⚠️ Growth Edge</div>'
+    +'<div style="font-size:.9rem;line-height:1.7;color:var(--muted);">'+AT.challenge+'</div></div>'
+    +'<div style="background:var(--ink2);border:1px solid var(--borderf);padding:1.6rem;position:relative;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);opacity:.35;"></div>'
+    +'<div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">🎯 Your Deepest Gift</div>'
+    +'<div style="font-size:.9rem;line-height:1.7;color:var(--muted);">'+kTI[topTrait]+'</div></div>'
+    +'</div>'
+
+    +'<div style="background:var(--ink3);border:1px solid var(--borderf);padding:2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;">'
+    +'<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>'
+    +'<div style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;">🌿 The Kairos Practice</div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:1rem;font-weight:700;color:var(--gold2);margin-bottom:.6rem;">Your Prescribed Discipline</div>'
+    +'<div style="font-size:.95rem;line-height:1.85;color:var(--muted);font-style:italic;">'+AT.practice+'</div>'
+    +'</div>'
+
+    +'<div style="background:var(--ink2);border:1px solid var(--borderf);padding:1.8rem;text-align:center;margin-bottom:1.5rem;">'
+    +'<p style="font-size:1rem;line-height:1.8;font-style:italic;color:var(--muted);max-width:500px;margin:0 auto .8rem;">"The right moment is not a gift — it is a recognition. What you train yourself to see, you will eventually seize."</p>'
+    +'<div style="font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);">— Kairos Compass</div>'
+    +'</div>'
+
+    +'<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">'
+    +'<button onclick="kRestart()" style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:none;padding:.9rem 2rem;cursor:pointer;transition:all .25s;">⟳ Take Again</button>'
+    +'<button onclick="window.print()" style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--borderf);padding:.9rem 2rem;cursor:pointer;transition:all .25s;">📜 Save Profile</button>'
+    +'</div>';
+
+  var rDiv=document.getElementById('kResults');
+  rDiv.innerHTML=html;
+  rDiv.style.display='block';
+  document.getElementById('kairos').scrollIntoView({behavior:'smooth'});
+
+  setTimeout(function(){
+    document.querySelectorAll('#kResults [data-w]').forEach(function(el){
+      el.style.width=el.dataset.w;
+    });
+  },400);
+}
+
+function kRestart(){
+  kA=new Array(10).fill(null);
+  kCur=0;
+  document.getElementById('kResults').style.display='none';
+  document.getElementById('kairosApp').style.display='block';
+  kRender();
+  document.getElementById('kairos').scrollIntoView({behavior:'smooth'});
+}
+
+/* Floating glyph animation for results */
+var kStyle=document.createElement('style');
+kStyle.textContent='@keyframes floatG{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}';
+document.head.appendChild(kStyle);
+
+kRender();
+/* ════ END KAIROS COMPASS LOGIC ════ */
+</script>
 <script>
 const rvEls = document.querySelectorAll('.rv');
 const obs = new IntersectionObserver(entries => {
